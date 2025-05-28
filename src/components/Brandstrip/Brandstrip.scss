@@ -1,0 +1,8 @@
+.brandstrip {
+    height: 4rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+  border-bottom: 3px solid #000000;
+}
