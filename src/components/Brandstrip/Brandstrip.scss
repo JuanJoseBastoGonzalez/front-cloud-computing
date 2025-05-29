@@ -6,3 +6,11 @@
   justify-items: center;
   border-bottom: 3px solid #000000;
 }
+
+.brandstrip__item img {
+  height: 80%;      // O usa 100% si prefieres que ocupe todo el alto
+  max-height: 3rem; // Nunca mayor que el contenedor
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
