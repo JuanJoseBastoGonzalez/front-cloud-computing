@@ -80,7 +80,7 @@ function Cart() {
                   <img src={item.creatorImg} alt="Creator" />
                 </div>
                 <p>
-                  <ins>Estado </ins> {item.creator}
+                  <ins>Estado: </ins> {item.creator}
                 </p>
               </div>
             </div>
