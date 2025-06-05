@@ -5,7 +5,7 @@ function Navbar() {
     <nav class="nav">
       <div>logo</div>
 
-      <div class="container">
+      <div class="container-nav">
         <input type="text" placeholder="Search..."></input>
         <div class="search"></div>
       </div>
