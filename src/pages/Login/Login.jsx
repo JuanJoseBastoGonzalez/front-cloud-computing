@@ -1,9 +1,34 @@
 import React, { useState } from "react";
 import { BiUser, BiLockAlt, BiEnvelope } from "react-icons/bi";
-import "./Login.scss"; // Asegúrate de crear los estilos correspondientes
+import "./Login.scss";
 
 function Login() {
   const [active, setActive] = useState(false);
+
+  // Estados para los datos de login y registro
+  const [loginData, setLoginData] = useState({ username: "", password: "" });
+  const [registerData, setRegisterData] = useState({ username: "", email: "", password: "" });
+
+  // Manejar cambios en los inputs de login
+  const handleLoginChange = (e) => {
+    setLoginData({ ...loginData, [e.target.name]: e.target.value });
+  };
+
+  // Manejar cambios en los inputs de registro
+  const handleRegisterChange = (e) => {
+    setRegisterData({ ...registerData, [e.target.name]: e.target.value });
+  };
+
+  // Solo mostrar los datos por consola al enviar
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+    console.log("Login data:", loginData);
+  };
+
+  const handleRegisterSubmit = (e) => {
+    e.preventDefault();
+    console.log("Register data:", registerData);
+  };
 
   return (
     <div className={`container${active ? " active" : ""}`}>
@@ -14,14 +39,26 @@ function Login() {
       {/* Login Form */}
       <div className="form-box Login">
         <h2 className="animation" style={{ "--D": 0, "--S": 21 }}>Login</h2>
-        <form>
+        <form onSubmit={handleLoginSubmit}>
           <div className="input-box animation" style={{ "--D": 1, "--S": 22 }}>
-            <input type="text" required />
+            <input
+              type="text"
+              name="username"
+              required
+              value={loginData.username}
+              onChange={handleLoginChange}
+            />
             <label>Username</label>
             <BiUser />
           </div>
           <div className="input-box animation" style={{ "--D": 2, "--S": 23 }}>
-            <input type="password" required />
+            <input
+              type="password"
+              name="password"
+              required
+              value={loginData.password}
+              onChange={handleLoginChange}
+            />
             <label>Password</label>
             <BiLockAlt />
           </div>
@@ -49,19 +86,37 @@ function Login() {
       {/* Register Form */}
       <div className="form-box Register">
         <h2 className="animation" style={{ "--li": 17, "--S": 0 }}>Register</h2>
-        <form>
+        <form onSubmit={handleRegisterSubmit}>
           <div className="input-box animation" style={{ "--li": 18, "--S": 1 }}>
-            <input type="text" required />
+            <input
+              type="text"
+              name="username"
+              required
+              value={registerData.username}
+              onChange={handleRegisterChange}
+            />
             <label>Username</label>
             <BiUser />
           </div>
           <div className="input-box animation" style={{ "--li": 19, "--S": 2 }}>
-            <input type="email" required />
+            <input
+              type="email"
+              name="email"
+              required
+              value={registerData.email}
+              onChange={handleRegisterChange}
+            />
             <label>Email</label>
             <BiEnvelope />
           </div>
           <div className="input-box animation" style={{ "--li": 19, "--S": 3 }}>
-            <input type="password" required />
+            <input
+              type="password"
+              name="password"
+              required
+              value={registerData.password}
+              onChange={handleRegisterChange}
+            />
             <label>Password</label>
             <BiLockAlt />
           </div>

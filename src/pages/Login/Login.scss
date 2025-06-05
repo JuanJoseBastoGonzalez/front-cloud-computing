@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
+
+:root {
+  --primay-color: #ff2770;
 }
 
 body{
@@ -12,16 +9,18 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #24242e;
 }
 
 .container{
+    color: white;
     position: relative;
     width: 750px;
     height: 450px;
-    border: 2px solid #ff2770;
-    box-shadow: 0 0 25px #ff2770;
+    border: 2px solid var(--primay-color);
+    box-shadow: 0 0 25px var(--primay-color);
     overflow: hidden;
+        background: url('https://cdn.pixabay.com/photo/2021/09/20/23/03/car-6642036_1280.jpg');
+
 }
 
 .container .form-box{
@@ -78,7 +77,7 @@ body{
     font-size: 32px;
     text-align: center;
     color:transparent;
-    background: linear-gradient(45deg, #ff2770, #ff8a00);
+    background: linear-gradient(45deg,var(--primay-color), #ff8a00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 30px;
@@ -281,7 +280,9 @@ body{
     top: 100%;
     height: 700px;
     width: 850px;
-    background: #25252b;
+    background: rgba(255,255,255,0.5); // blanco semi-transparente
+
+    filter: blur(10px);
     border-top: 3px solid #ff2770;
     transform: rotate(0deg) skewY(0deg);
     transform-origin: bottom left;

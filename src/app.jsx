@@ -10,11 +10,11 @@ import "./styles/global/base.scss";
 function App() {
   return (
     <div>
-       <Login />
-     {/* <Navbar />
+     {/*<Login />*/ }  
+     <Navbar />
        <Banner />
        <Brandstrip />
-       <Cart />*/}
+       <Cart />
 
       {/* El resto de tu aplicación */}
     </div>
