@@ -7,11 +7,12 @@ function BuyCar() {
   const [imgId, setImgId] = useState(0);
   const showcaseRef = useRef(null);
 
-  // Simula fetch de datos (puedes reemplazar por fetch real)
+
   useEffect(() => {
+
     // Simulación de respuesta JSON
     const fetchCar = async () => {
-      // Aquí iría tu fetch real, por ejemplo:
+      // Aquí iría tu fetch real, 
       // const res = await fetch("/api/vehiculo/123");
       // const data = await res.json();
       const data = {
