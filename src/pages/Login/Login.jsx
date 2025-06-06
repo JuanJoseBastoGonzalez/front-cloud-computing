@@ -31,7 +31,9 @@ function Login() {
   // Mostrar los datos por consola al enviar
   const handleLoginSubmit = (e) => {
     e.preventDefault();
+    // Aquí puedes validar el login si quieres
     console.log("Login data:", loginData);
+    navigate("/home"); // Redirige a Home después de login
   };
 
   const handleRegisterSubmit = async (e) => {

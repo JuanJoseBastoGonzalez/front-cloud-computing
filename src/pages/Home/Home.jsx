@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "./../../components/Nav/Nav.jsx";
 import Banner from "./../../components/banner/banner.jsx";
 import Brandstrip from "./../../components/Brandstrip/Brandstrip.jsx";

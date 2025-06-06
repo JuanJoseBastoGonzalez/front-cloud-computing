@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Cart.scss";
 
 const cartItems = [
   {
+    id: 1,
     image:
       "https://cdn.pixabay.com/photo/2016/02/19/15/56/transformers-1210585_1280.jpg",
     title: "CHEVEROLET  ",
@@ -16,6 +18,7 @@ const cartItems = [
   },
   // Puedes duplicar este objeto para más items o mapear desde un array real
   {
+    id: 2,
     image:
       "https://cdn.pixabay.com/photo/2022/08/29/10/22/mazda-mx-5-7418536_960_720.jpg",
     title: "MAZDA MX-5",
@@ -28,6 +31,7 @@ const cartItems = [
     creator: "Usado",
   },
   {
+    id: 3,
     image:
       "https://cdn.pixabay.com/photo/2023/10/24/22/15/car-8339254_960_720.jpg",
     title: "FERRARI",
@@ -40,6 +44,7 @@ const cartItems = [
     creator: "Usado",
   },
   {
+    id: 4,
     image:
       "https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     title: "Kibertopiks #4269",
@@ -54,12 +59,14 @@ const cartItems = [
 ];
 
 function Cart() {
+  const navigate = useNavigate();
+
   return (
     <div className="cart">
       <p>VEHICULOS EN VENTA</p>
-      <div class="cartItems">
-        {cartItems.map((item, idx) => (
-          <div className="nft" key={idx}>
+      <div className="cartItems">
+        {cartItems.map((item) => (
+          <div className="nft" key={item.id}>
             <div className="main">
               <img className="tokenImage" src={item.image} alt="NFT" />
               <h2>{item.title}</h2>
@@ -84,6 +91,7 @@ function Cart() {
                 </p>
               </div>
             </div>
+            <button onClick={() => navigate(`/buycar/${item.id}`)}>Ver detalles</button>
           </div>
         ))}
       </div>

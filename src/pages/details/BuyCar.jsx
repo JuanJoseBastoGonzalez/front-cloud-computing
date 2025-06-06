@@ -1,15 +1,16 @@
 import React, { useRef, useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Navbar from "../../components/Nav/Nav";
 import "./BuyCar.scss";
 
 function BuyCar() {
+  const { id: paramId } = useParams();
+  const id = 12; // Ignora paramId temporalmente
   const [carData, setCarData] = useState(null);
   const [imgId, setImgId] = useState(0);
   const showcaseRef = useRef(null);
 
-
   useEffect(() => {
-
     // Simulación de respuesta JSON
     const fetchCar = async () => {
       // Aquí iría tu fetch real, 
@@ -47,7 +48,7 @@ function BuyCar() {
       setCarData(data);
     };
     fetchCar();
-  }, []);
+  }, [id]);
 
   // Slide effect
   useEffect(() => {

@@ -6,21 +6,18 @@ import Brandstrip from "./components/Brandstrip/Brandstrip.jsx";
 import Cart from "./components/Cart/Cart.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Home from "./pages/Home/Home.jsx"; 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Buycar from "./pages/details/BuyCar.jsx";
+import { Routes, Route } from "react-router-dom";
+import BuyCar from "./pages/details/BuyCar.jsx";
 // Importación de estilos globales
 import "./styles/global/base.scss";
-import BuyCar from "./pages/details/BuyCar.jsx";
 function App() {
   return (
     <div>
-      <Buycar />
-   { /* <Login />
-   <Navbar />
-       <Banner />
-       <Brandstrip />
-       <Cart />*/ }
-
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/buycar/:id" element={<BuyCar />} />
+      </Routes>
       {/* El resto de tu aplicación */}
     </div>
   );
