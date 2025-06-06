@@ -122,4 +122,12 @@ src/
 - **GitHub:** [JuanJoseBastoGonzalez](https://github.com/JuanJoseBastoGonzalez)
 - **LinkedIn:** [Juan Jose Basto Gonzalez](https://www.linkedin.com/in/juan-jose-basto-gonzalez-49945023a/)
 
+
+## Despliegue
+
+El proyecto está desplegado y disponible en:  
+👉 [https://juanjose.ddsr.pro/](https://juanjose.ddsr.pro/)
+
+---
+
 Proyecto base para prácticas de React y cloud computing.
